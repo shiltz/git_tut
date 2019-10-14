@@ -1,21 +1,9 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+node {
+    def tag = "heha"
+        env.tag = tag
+    
+    stage('Checkstyle -> Tests -> Deploy to Nexus (where applicable)') {
+        echo 'Hello World'
     }
+   
 }
