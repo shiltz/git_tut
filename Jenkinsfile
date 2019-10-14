@@ -3,7 +3,7 @@ node {
         env.tag = tag
     
     stage('Checkstyle -> Tests -> Deploy to Nexus (where applicable)') {
-        echo 'Hello World'
+       sh 'printenv'
     }
    
 }
